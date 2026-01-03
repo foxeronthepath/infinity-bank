@@ -1901,3 +1901,368 @@ body {
     opacity: 0.5;
     cursor: not-allowed;
 }
+
+/* ============================================
+   AUTHENTICATOR PAGE STYLES
+   ============================================ */
+
+.authenticator-container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.authenticator-card {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 48px;
+    max-width: 480px;
+    width: 100%;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e9ecef;
+    animation: fadeInUp 0.5s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.authenticator-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+    padding-bottom: 32px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.authenticator-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.authenticator-logo-img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+.authenticator-logo-text {
+    font-size: 32px;
+    font-weight: 700;
+    color: #212529;
+    letter-spacing: -0.5px;
+}
+
+.authenticator-account {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 24px;
+    background: linear-gradient(135deg, #ff8c42 0%, #ff6b9d 100%);
+    border-radius: 16px;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(255, 140, 66, 0.3);
+}
+
+.account-avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 700;
+    flex-shrink: 0;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.account-info {
+    flex: 1;
+    color: #ffffff;
+}
+
+.account-name {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    letter-spacing: -0.3px;
+}
+
+.account-type {
+    font-size: 13px;
+    opacity: 0.9;
+    font-weight: 500;
+}
+
+.pin-display-section {
+    text-align: center;
+    margin-bottom: 32px;
+    padding: 32px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    border-radius: 20px;
+    border: 2px solid #e9ecef;
+}
+
+.pin-label {
+    font-size: 14px;
+    color: #6c757d;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.pin-code {
+    font-size: 48px;
+    font-weight: 700;
+    color: #002fff;
+    letter-spacing: 12px;
+    font-family: 'Courier New', monospace;
+    margin-bottom: 24px;
+    text-shadow: 0 2px 8px rgba(107, 182, 255, 0.2);
+}
+
+.pin-timer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: #6c757d;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.timer-icon {
+    color: #ff8c42;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.timer-text {
+    color: #495057;
+}
+
+.pin-progress {
+    width: 100%;
+    height: 6px;
+    background: #e9ecef;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 32px;
+}
+
+.pin-progress-bar {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #6bb6ff 0%, #8b5cf6 100%);
+    border-radius: 10px;
+    transition: width 1s linear, background 0.3s ease;
+    box-shadow: 0 2px 8px rgba(107, 182, 255, 0.3);
+}
+
+.authenticator-info {
+    margin-bottom: 32px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 12px;
+    border-left: 4px solid #ff8c42;
+}
+
+.info-item {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.info-icon {
+    color: #ff8c42;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.info-text {
+    flex: 1;
+}
+
+.info-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: #212529;
+    margin-bottom: 6px;
+}
+
+.info-description {
+    font-size: 13px;
+    color: #6c757d;
+    line-height: 1.5;
+}
+
+.authenticator-actions {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.refresh-button,
+.copy-button {
+    flex: 1;
+    padding: 14px 20px;
+    border: 2px solid #e9ecef;
+    border-radius: 12px;
+    background: #ffffff;
+    color: #495057;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.refresh-button:hover {
+    border-color: #ff8c42;
+    background: #fff8f5;
+    color: #ff8c42;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 140, 66, 0.15);
+}
+
+.copy-button:hover {
+    border-color: #6bb6ff;
+    background: #f0f7ff;
+    color: #6bb6ff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(107, 182, 255, 0.15);
+}
+
+.refresh-button:active,
+.copy-button:active {
+    transform: translateY(0);
+}
+
+.refresh-button svg,
+.copy-button svg {
+    flex-shrink: 0;
+}
+
+.status-message {
+    display: none;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.status-message.status-success {
+    background: #e8f5e9;
+    color: #2e7d32;
+    border: 1px solid #a5d6a7;
+}
+
+.status-message.status-error {
+    background: #ffebee;
+    color: #c62828;
+    border: 1px solid #ef9a9a;
+}
+
+.authenticator-footer {
+    margin-top: 32px;
+    text-align: center;
+}
+
+.back-to-dashboard {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #6c757d;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.back-to-dashboard:hover {
+    color: #ff8c42;
+    background: rgba(255, 140, 66, 0.1);
+}
+
+.back-to-dashboard svg {
+    flex-shrink: 0;
+}
+
+/* Responsive Design for Authenticator */
+@media (max-width: 768px) {
+    .authenticator-card {
+        padding: 32px 24px;
+        border-radius: 20px;
+    }
+
+    .pin-code {
+        font-size: 36px;
+        letter-spacing: 8px;
+    }
+
+    .authenticator-account {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .account-avatar {
+        width: 64px;
+        height: 64px;
+        font-size: 24px;
+    }
+
+    .authenticator-actions {
+        flex-direction: column;
+    }
+
+    .refresh-button,
+    .copy-button {
+        width: 100%;
+    }
+}

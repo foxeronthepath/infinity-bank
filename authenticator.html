@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KEY - PIN Generator</title>
+    <link rel="icon" type="image/x-icon" href="assets/icon2.ico">
+    <link rel="icon" type="image/png" href="assets/icon.png">
+    <link rel="apple-touch-icon" href="assets/icon.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="authenticator-container">
+        <div class="authenticator-card">
+            <!-- Header -->
+            <div class="authenticator-header">
+                <div class="authenticator-logo">
+                    <img src="assets/icon.png" alt="KEY" class="authenticator-logo-img">
+                    <span class="authenticator-logo-text">KEY</span>
+                </div>
+                <div class="authenticator-account">
+                    <div class="account-avatar">MJ</div>
+                    <div class="account-info">
+                        <div class="account-name">Michael Johnson</div>
+                        <div class="account-type">KEY Account</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PIN Display -->
+            <div class="pin-display-section">
+                <div class="pin-label">Your Verification PIN</div>
+                <div class="pin-code" id="pin-code">000000</div>
+                <div class="pin-timer">
+                    <svg class="timer-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                    <span class="timer-text">Valid for <span id="timer-seconds">30</span> seconds</span>
+                </div>
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="pin-progress">
+                <div class="pin-progress-bar" id="progress-bar"></div>
+            </div>
+
+            <!-- Info Section -->
+            <div class="authenticator-info">
+                <div class="info-item">
+                    <svg class="info-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="12" y1="16" x2="12" y2="12"></line>
+                        <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                    </svg>
+                    <div class="info-text">
+                        <div class="info-title">Secure PIN Generation</div>
+                        <div class="info-description">This PIN is automatically generated and refreshes every 30 seconds for your security.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="authenticator-actions">
+                <button class="refresh-button" id="refresh-pin">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="23 4 23 10 17 10"></polyline>
+                        <polyline points="1 20 1 14 7 14"></polyline>
+                        <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+                    </svg>
+                    Refresh Now
+                </button>
+                <button class="copy-button" id="copy-pin">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    Copy PIN
+                </button>
+            </div>
+
+            <!-- Status Message -->
+            <div class="status-message" id="status-message"></div>
+        </div>
+    </div>
+
+    <script src="authenticator.js"></script>
+</body>
+</html>
+
