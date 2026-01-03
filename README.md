@@ -1,6 +1,6 @@
-# Infinity Bank
+# Key Bank
 
-Sito web semplice per Infinity Bank con pagina di login.
+Sito web semplice per Key Bank con pagina di login.
 
 ## Struttura
 
